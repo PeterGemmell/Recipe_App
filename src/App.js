@@ -1,12 +1,10 @@
 import React, { useEffect, useState} from "react";
 import './App.css';
-import {APP_ID} from './config'
-import {APP_KEY} from './config'
+import {APP_ID} from './config';
+import {APP_KEY} from './config';
 
 const App = () => {
 
-  const APP_ID = '';
-  const APP_KEY = '';
 
 
   useEffect(() => {
@@ -14,11 +12,10 @@ const App = () => {
   }, []);
 
   const getRecipes = async () => {
-    const response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`);
-
-      const data = await response.json();
-      console.log(data);
-  }
+  const response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`);
+  const data = await response.json();
+  console.log(data);
+ };
 
 
 
