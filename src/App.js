@@ -29,6 +29,7 @@ const updateSearch = e => {
 const getSearch = e => {
   e.preventDefault();
   setQuery(search);
+  setSearch('');
 }
 
 
@@ -40,7 +41,7 @@ const getSearch = e => {
     </form>
     {recipes.map(recipe => (
       <Recipe key={recipe.recipe.label} title={recipe.recipe.label} calories={recipe.recipe.calories}
-      image={recipe.recipe.image}/>
+      image={recipe.recipe.image} ingredients={recipe.recipe.ingredients}/>
     ))}
     </div>
   );
