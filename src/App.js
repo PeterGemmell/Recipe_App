@@ -41,8 +41,11 @@ const getSearch = e => {
     </form>
     <div className="recipes">
     {recipes.map(recipe => (
-      <Recipe key={recipe.recipe.label} title={recipe.recipe.label} calories={recipe.recipe.calories}
-      image={recipe.recipe.image} ingredients={recipe.recipe.ingredients}/>
+      <Recipe key={recipe.recipe.label}
+      title={recipe.recipe.label}
+      calories={recipe.recipe.calories}
+      image={recipe.recipe.image}
+      ingredients={recipe.recipe.ingredients}/>
     ))}
     </div>
     </div>
