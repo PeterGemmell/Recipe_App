@@ -5,16 +5,17 @@ import {APP_KEY} from './config';
 
 const App = () => {
 
-
+const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
     getRecipes();
   }, []);
 
+  // Resolved CORS issue by fetching from client - server - server(the one we want data from), as appose to client - server.
   const getRecipes = async () => {
   const response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`);
   const data = await response.json();
-  console.log(data);
+  setRecipes(data.hits);
  };
 
 
