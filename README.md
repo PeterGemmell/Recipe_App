@@ -1,7 +1,7 @@
 ## Set up / Running the project
 
-* download Recipe_App
-* in terminal, navigate to Recipe_App
+* Download Recipe_App
+* In terminal, navigate to Recipe_App
 * cd into recipe_app
 * npm install
 * npm start
